@@ -25,10 +25,8 @@ def analyze(request):
     #Check which checkbox is on
     if removepunc == "on":
         punctuations = '''!()-[]{};:'",<>./?@#$%^&*_~'''
-       # print(djtext)
         analyzed = ""
         for char in djtext:
-            print(char)
             if char not in punctuations:
                 analyzed = analyzed + char
         params = {'purpose':'Removed Punctuations', 'analyzed_text': analyzed}
